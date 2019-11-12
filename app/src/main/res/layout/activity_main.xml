@@ -30,6 +30,7 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/kabla_ya_ujauzito"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -39,7 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:padding="10dp"
-                    android:src="@mipmap/hedhi"
+                    android:src="@mipmap/mtu_na_mchumba"
                     android:contentDescription="@string/hedhi" />
 
                 <View
@@ -78,7 +79,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:padding="10dp"
-                    android:src="@mipmap/hiv"
+                    android:src="@mipmap/baba_analea"
                     android:contentDescription="@string/hiv" />
 
                 <View
@@ -128,7 +129,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:padding="10dp"
-                    android:src="@mipmap/uzazi_na_mpango"
+                    android:src="@mipmap/analea"
                     android:contentDescription="@string/uzazi_wa_mpango" />
 
                 <View

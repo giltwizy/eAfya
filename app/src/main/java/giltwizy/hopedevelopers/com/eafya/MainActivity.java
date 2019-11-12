@@ -9,6 +9,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -27,14 +29,15 @@ public class MainActivity extends AppCompatActivity {
         CardView hedhi = findViewById(R.id.hedhiCardView);
         CardView hiv = findViewById(R.id.hivCardView);
         CardView uzazi = findViewById(R.id.uzaziWaMpangoCardView);
+        LinearLayout kablayaujauzito = findViewById(R.id.kabla_ya_ujauzito);
 //        CardView simu = findViewById(R.id.simuCardView);
 //        CardView ujumbe = findViewById(R.id.ujumbeWaManenoCardView);
 //        CardView picha = findViewById(R.id.pichaCardView);
 
          final Timer timer = new Timer();
-        mp = MediaPlayer.create(context, R.raw.wakati_wa_ujauzito);
+        mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
 
-        hedhi.setOnTouchListener(new View.OnTouchListener() {
+        kablayaujauzito.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View arg0, MotionEvent arg1) {
                 switch ( arg1.getAction() ) {
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                             if (mp.isPlaying()) {
                                 mp.stop();
                                 mp.release();
-                                mp = MediaPlayer.create(context, R.raw.wakati_wa_ujauzito);
+                                mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
                             } else {
                                 mp.start();
                             }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Uzazi"></activity>
+        <activity android:name=".Age"></activity>
+        <activity android:name=".Uzazi" />
         <activity android:name=".Hiv" />
         <activity android:name=".Hedhi" />
         <activity android:name=".MainActivity" />

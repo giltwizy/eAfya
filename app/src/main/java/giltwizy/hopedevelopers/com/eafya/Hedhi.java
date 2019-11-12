@@ -25,7 +25,7 @@ public class Hedhi extends AppCompatActivity implements View.OnClickListener {
         RelativeLayout kutokwaNaDamu = findViewById(R.id.kutokwaNaDamuLayout);
         RelativeLayout  daliliZaKuanzaHedhi = findViewById(R.id.dalliliZaKuanzaHedhiLayout);
 //        hedhininini.setOnClickListener(this);
-        mp = MediaPlayer.create(this,R.raw.test);
+        mp = MediaPlayer.create(this,R.raw.miaka);
 
 //        hedhininini.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -57,7 +57,7 @@ public class Hedhi extends AppCompatActivity implements View.OnClickListener {
                     if (mp.isPlaying()) {
                         mp.stop();
                         mp.release();
-                        mp = MediaPlayer.create(context, R.raw.test);
+                        mp = MediaPlayer.create(context, R.raw.wakati_wa_ujauzito);
                     } else {
                         mp.start();
                     }

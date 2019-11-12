@@ -18,7 +18,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        mp = MediaPlayer.create(context, R.raw.welcome);
+        mp = MediaPlayer.create(context, R.raw.karibu);
         mp.start();
 
 

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 //        CardView picha = findViewById(R.id.pichaCardView);
 
          final Timer timer = new Timer();
-        mp = MediaPlayer.create(context, R.raw.test);
+        mp = MediaPlayer.create(context, R.raw.wakati_wa_ujauzito);
 
         hedhi.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                             if (mp.isPlaying()) {
                                 mp.stop();
                                 mp.release();
-                                mp = MediaPlayer.create(context, R.raw.test);
+                                mp = MediaPlayer.create(context, R.raw.wakati_wa_ujauzito);
                             } else {
                                 mp.start();
                             }

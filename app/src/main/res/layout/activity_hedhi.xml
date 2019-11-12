@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Hedhi">
+
+    <LinearLayout
+        android:id="@+id/hedhiLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.Hedhi ni nini?"
+            android:textSize="20sp"/>
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/hedhininini"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_volume_up_black_24dp" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/kalendaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.Jua kuhusu kalenda"
+            android:textSize="20sp"/>
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/kalenda"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_volume_up_black_24dp" />-->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/kutokwaNaDamuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/kutokwaNaDamuTv"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:text="3.Kutokwa na damu mara kwa mara husabaishwa na nini?"
+            android:textSize="20sp" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/kutokwanadamu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toRightOf="@id/kutokwaNaDamuTv"-->
+<!--            android:src="@drawable/ic_volume_up_black_24dp" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dalliliZaKuanzaHedhiLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/daliliZaKuanzahedhiTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:text="4.Dalili za kuanza hedhi ni zipi?"
+            android:textSize="20sp" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/daliliZaKuanzahedhiIb"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toRightOf="@id/daliliZaKuanzahedhiTv"-->
+<!--            android:src="@drawable/ic_volume_up_black_24dp" />-->
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -33,13 +33,14 @@ public class Age extends AppCompatActivity {
         miakakumi.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View arg0, MotionEvent arg1) {
+                mp = MediaPlayer.create(context, R.raw.miaka_kumi_na_kumiananne);
                 switch ( arg1.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
                         try {
                             if (mp.isPlaying()) {
                                 mp.stop();
                                 mp.release();
-                                mp = MediaPlayer.create(context, R.raw.miaka_kumi);
+
                             } else {
                                 mp.start();
                             }

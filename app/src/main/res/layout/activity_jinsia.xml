@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Hedhi">
+    tools:context=".Jinsia">
 
     <LinearLayout
-        android:id="@+id/hedhiLayout"
+        android:id="@+id/ujinsiaLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -29,7 +29,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/kalendaLayout"
+        android:id="@+id/usafiLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"

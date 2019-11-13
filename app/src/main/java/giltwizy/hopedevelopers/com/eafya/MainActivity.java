@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                             public void run() {
                                 mp.stop();
                                 mp.release();
-                                Intent hedhiIntent = new Intent(getApplicationContext(),Hedhi.class);
+                                Intent hedhiIntent = new Intent(getApplicationContext(), Jinsia.class);
                                 startActivity(hedhiIntent);
                             }
                         }, 5000); //time out 5s

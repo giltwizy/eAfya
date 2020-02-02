@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Age"></activity>
+        <activity android:name=".KipindiChaHedhi"></activity>
+        <activity android:name=".Age" />
         <activity android:name=".Uzazi" />
         <activity android:name=".Hiv" />
         <activity android:name=".Jinsia" />

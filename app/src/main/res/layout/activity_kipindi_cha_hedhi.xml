@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Hiv">
+    tools:context=".KipindiChaHedhi">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/kipindiChaHedhiToolbar"
@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HIV"
+        android:text="Kipindi cha Hedhi"
         android:textSize="24sp"
         android:layout_centerHorizontal="true"
         android:gravity="center"
@@ -40,9 +40,10 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:paddingTop="5dp"
-                android:text="1.Ukimwi ni nini?" />
+                android:text="1.Hedhi ni nini?" />
 
             <ImageButton
+                android:id="@+id/hedhidefinition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_volume_up_black_24dp"/>
@@ -61,49 +62,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:paddingTop="5dp"
-                android:text="2.Dalili za ukimwi ni zipi?" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_volume_up_black_24dp"/>
-
-
-
-        </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:paddingTop="5dp"
-            android:text="3.Nifanyaje ili nisipate Ukimwi" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_volume_up_black_24dp"/>
-
-
-
-                </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:paddingTop="5dp"
-                android:text="4.Ngono salama ni ipi?" />
+                android:text="2.Jua kuhusu kalenda" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -124,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:paddingTop="5dp"
-                android:text="5.Nifanye nini baada ya kugundua nina virusi vya ukimwi?" />
+                android:text="3.Kutokwa na damu mara kwa mara husababishwa na nini" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -135,17 +94,17 @@
 
 <!--        </LinearLayout>-->
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:paddingTop="5dp"
-                android:text="6.Je nikijaamiana na mtu mwenye virusi vya ukimwi nitapata ukimwi?" />
+                android:text="4.Dalili za kuanza hedhi ni zipi" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -154,7 +113,7 @@
 
 
 
-<!--        </LinearLayout>-->
+        </LinearLayout>
 
         <Button
             android:layout_width="wrap_content"

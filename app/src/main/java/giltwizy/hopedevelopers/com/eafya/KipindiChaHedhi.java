@@ -20,16 +20,16 @@ public class KipindiChaHedhi extends AppCompatActivity {
         setContentView(R.layout.activity_kipindi_cha_hedhi);
 
 
-        CardView hedhiCardView = findViewById(R.id.hedhiCardView);
-
-        hedhiCardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mp = MediaPlayer.create(context, R.raw.kipindi_cha_hedhi);
-                Intent openKipindiChaHedhi = new Intent(getApplicationContext(),KipindiChaHedhi.class);
-                startActivity(openKipindiChaHedhi);
-
-            }
-        });
+//        CardView hedhiCardView = findViewById(R.id.hedhiCardView);
+//
+//        hedhiCardView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mp = MediaPlayer.create(context, R.raw.kipindi_cha_hedhi);
+//                Intent openKipindiChaHedhi = new Intent(getApplicationContext(),KipindiChaHedhi.class);
+//                startActivity(openKipindiChaHedhi);
+//
+//            }
+//        });
     }
 }

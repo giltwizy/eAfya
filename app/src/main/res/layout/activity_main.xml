@@ -22,7 +22,7 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/hedhiCardView"
+            android:id="@+id/kipindiChaHedhiCardView"
             android:layout_width="0dp"
             app:cardCornerRadius="30dp"
             android:layout_margin="5dp"
@@ -78,9 +78,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:contentDescription="@string/hiv"
                     android:padding="10dp"
-                    android:src="@mipmap/hiv"
-                    android:contentDescription="@string/hiv" />
+                    android:src="@mipmap/hiv" />
 
                 <View
                     android:layout_width="match_parent"
@@ -93,8 +93,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:text="@string/hiv"
                     android:textAllCaps="true"
-                    android:text="Kipindi cha Ujauzito"
                     android:textStyle="bold" />
             </LinearLayout>
 

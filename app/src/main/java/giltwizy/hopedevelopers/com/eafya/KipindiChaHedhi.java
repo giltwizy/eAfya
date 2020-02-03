@@ -1,13 +1,12 @@
 package giltwizy.hopedevelopers.com.eafya;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Context;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class KipindiChaHedhi extends AppCompatActivity {
 
@@ -20,16 +19,14 @@ public class KipindiChaHedhi extends AppCompatActivity {
         setContentView(R.layout.activity_kipindi_cha_hedhi);
 
 
-//        CardView hedhiCardView = findViewById(R.id.hedhiCardView);
-//
-//        hedhiCardView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mp = MediaPlayer.create(context, R.raw.kipindi_cha_hedhi);
-//                Intent openKipindiChaHedhi = new Intent(getApplicationContext(),KipindiChaHedhi.class);
-//                startActivity(openKipindiChaHedhi);
-//
-//            }
-//        });
+        ImageButton hedhiDefinition = findViewById(R.id.hedhidefinition);
+
+        hedhiDefinition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp = MediaPlayer.create(context, R.raw.hedhi_definition);
+                mp.start();
+            }
+        });
     }
 }

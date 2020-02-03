@@ -1,8 +1,5 @@
 package giltwizy.hopedevelopers.com.eafya;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -11,11 +8,9 @@ import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
     MediaPlayer mp;
@@ -70,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 @Override
                 public boolean onSingleTapConfirmed(MotionEvent event) {
-                    mp = MediaPlayer.create(context,R.raw.h);
+                    mp = MediaPlayer.create(context, R.raw.ukimwi);
                     mp.start();
 //                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
                     Log.d("onSingleTapConfirmed", "onSingleTap");

@@ -21,15 +21,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CardView hedhi = findViewById(R.id.kipindiChaHedhiCardView);
+        CardView kablaYaUjauzito = findViewById(R.id.kablaYaUjauzitoCardView);
         CardView hiv = findViewById(R.id.hivCardView);
-        CardView uzazi = findViewById(R.id.uzaziWaMpangoCardView);
 
-        hedhi.setOnTouchListener(new View.OnTouchListener() {
+        kablaYaUjauzito.setOnTouchListener(new View.OnTouchListener() {
             private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Intent hedhiActivity = new Intent(getApplicationContext(),KipindiChaHedhi.class);
+                    Intent hedhiActivity = new Intent(getApplicationContext(), ChaguaUmri.class);
                     startActivity(hedhiActivity);
 //                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
 //                    hedhi(nView);
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 @Override
                 public boolean onSingleTapConfirmed(MotionEvent event) {
-                    mp = MediaPlayer.create(context,R.raw.kipindi_cha_hedhi);
+                    mp = MediaPlayer.create(context, R.raw.kipindi_kabla_ya_ujauzito);
                     mp.start();
 //                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
                     Log.d("onSingleTapConfirmed", "onSingleTap");

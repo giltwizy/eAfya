@@ -5,17 +5,17 @@
     android:layout_height="match_parent"
     android:background="@color/blue"
     android:orientation="vertical"
-    tools:context=".Hiv">
+    tools:context=".ChaguaUmri">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HIV"
         android:layout_gravity="center"
-        android:textSize="24sp"
         android:padding="10dp"
+        android:text="kabla ya ujauzito"
         android:textAllCaps="true"
-        android:textColor="@color/words_grey" />
+        android:textColor="@color/words_grey"
+        android:textSize="24sp" />
 
 
     <LinearLayout
@@ -26,12 +26,12 @@
 
 
         <TextView
-            android:id="@+id/ukimwiNiNini"
+            android:id="@+id/umriKuminaKumiNaNne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="10dp"
-            android:text="Ukimwi ni nini?"
+            android:text="Je una umri kati ya miaka 10 - 14"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -43,12 +43,12 @@
             android:padding="10dp" />
 
         <TextView
-            android:id="@+id/daliliZaUkimwi"
+            android:id="@+id/umriKumiNaTanonaIshiriniNaNne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="10dp"
-            android:text="Dalili za ukimwi ni zipi?"
+            android:text="Je una umri kati ya miaka 15 - 24"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -60,29 +60,12 @@
             android:padding="10dp" />
 
         <TextView
-            android:id="@+id/kujikingaNaUkimwi"
+            android:id="@+id/umriIshiriniNaTanoNaZaidi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="10dp"
-            android:text="Namna ya kujikinga na ukimwi"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="5dp"
-            android:background="@color/colorAccent"
-            android:padding="10dp" />
-
-        <TextView
-            android:id="@+id/nikijaamiana"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:text="Je nikijaamiana na mtu mwenye virusi vya ukimwi nami nitapata ukimwi"
+            android:text="Je una umri kati ya miaka 25+"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -103,8 +86,6 @@
             android:background="@color/blue"
             android:text="Rudi nyuma"
             android:textColor="@color/white" />
-
-
 
 
     </LinearLayout>

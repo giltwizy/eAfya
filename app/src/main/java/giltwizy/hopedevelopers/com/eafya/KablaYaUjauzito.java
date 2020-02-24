@@ -9,23 +9,23 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Hiv extends AppCompatActivity {
+public class KablaYaUjauzito extends AppCompatActivity {
     MediaPlayer mp;
     Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hiv);
+        setContentView(R.layout.activity_kabla_ya_ujauzito);
 
         Button rudiNyuma = findViewById(R.id.rudiNyuma);
 
-        TextView ukimwiNiNini = findViewById(R.id.ukimwiNiNini);
+        TextView umriSahihiKupataUjauzito = findViewById(R.id.umriSahihiKupataUjauzito);
 
-        ukimwiNiNini.setOnClickListener(new View.OnClickListener() {
+        umriSahihiKupataUjauzito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp = MediaPlayer.create(context, R.raw.ukimwi_ni_nini);
+                mp = MediaPlayer.create(context, R.raw.umri_wa_kupata_ujauzito);
                 mp.start();
             }
         });

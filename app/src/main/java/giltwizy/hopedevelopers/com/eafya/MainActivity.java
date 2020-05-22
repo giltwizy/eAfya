@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Intent hedhiActivity = new Intent(getApplicationContext(), ChaguaUmri.class);
+                    Intent hedhiActivity = new Intent(getApplicationContext(), KablaYaUjauzito.class);
                     startActivity(hedhiActivity);
 //                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
 //                    hedhi(nView);

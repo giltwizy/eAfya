@@ -22,13 +22,13 @@ public class KablaYaUjauzito extends AppCompatActivity {
 
         TextView umriSahihiKupataUjauzito = findViewById(R.id.umriSahihiKupataUjauzito);
 
-        umriSahihiKupataUjauzito.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mp = MediaPlayer.create(context, R.raw.umri_wa_kupata_ujauzito);
-                mp.start();
-            }
-        });
+//        umriSahihiKupataUjauzito.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mp = MediaPlayer.create(context, R.raw.umri_wa_kupata_ujauzito);
+//                mp.start();
+//            }
+//        });
 
         rudiNyuma.setOnClickListener(new View.OnClickListener() {
             @Override

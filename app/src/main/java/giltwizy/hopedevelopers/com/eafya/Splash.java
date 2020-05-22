@@ -1,15 +1,15 @@
 package giltwizy.hopedevelopers.com.eafya;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Splash extends AppCompatActivity {
-    private static int SPLASH_TIMEOUT = 3000;
+    private static final int SPLASH_TIMEOUT = 3000;
     Context context = this;
     MediaPlayer mp;
 

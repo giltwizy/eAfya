@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".KablaYaUjauzito"></activity>
+        <activity android:name=".KablaYaUjauzito" />
         <activity android:name=".ChaguaUmri" />
         <activity android:name=".Hiv" />
         <activity android:name=".MainActivity" />

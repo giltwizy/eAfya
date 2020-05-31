@@ -37,10 +37,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 @Override
                 public boolean onSingleTapConfirmed(MotionEvent event) {
-                    mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
-                    mp.start();
+                        mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
+                        mp.start();
 //                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
-                    Log.d("onSingleTapConfirmed", "Baada ya ujauzito");
+                        Log.d("onSingleTapConfirmed", "Baada ya ujauzito");
+
                     return false;
                 }
             });
@@ -108,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
 
 
 

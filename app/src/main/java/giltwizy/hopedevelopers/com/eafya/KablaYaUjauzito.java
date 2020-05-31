@@ -28,7 +28,7 @@ public class KablaYaUjauzito extends AppCompatActivity {
         mamboYaKuzingatiaKablaYaUjauzito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp = MediaPlayer.create(context, R.raw.mambo_ya_kuzingatia_kabla_ya_ujauzito);
+                mp = MediaPlayer.create(context, R.raw.maelezo_mambo_ya_kuzingatia_kabla_ya_ujauzito);
                 mp.start();
             }
         });
@@ -68,9 +68,9 @@ public class KablaYaUjauzito extends AppCompatActivity {
         rudiNyuma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
                 mp = MediaPlayer.create(context, R.raw.sitisha);
                 mp.start();
+                onBackPressed();
             }
         });
     }

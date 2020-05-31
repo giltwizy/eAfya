@@ -1,149 +1,116 @@
 package giltwizy.hopedevelopers.com.eafya;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.LinearLayout;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
-    Context context = this;
     MediaPlayer mp;
+    Context context = this;
 
-
-
-    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CardView hedhi = findViewById(R.id.hedhiCardView);
-        CardView hiv = findViewById(R.id.hivCardView);
-        CardView uzazi = findViewById(R.id.uzaziWaMpangoCardView);
-        LinearLayout kablayaujauzito = findViewById(R.id.kabla_ya_ujauzito);
-//        CardView simu = findViewById(R.id.simuCardView);
-//        CardView ujumbe = findViewById(R.id.ujumbeWaManenoCardView);
-//        CardView picha = findViewById(R.id.pichaCardView);
+        CardView kablaYaUjauzito = findViewById(R.id.kablaYaUjauzitoCardView);
+        CardView wakatiWaUjauzito = findViewById(R.id.wakatiWaUjauzitoCardView);
+        CardView baadaYaUjauzito = findViewById(R.id.baadaYaUjauzitoCardView);
 
-         final Timer timer = new Timer();
-        mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
-
-        kablayaujauzito.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View arg0, MotionEvent arg1) {
-                switch ( arg1.getAction() ) {
-                    case MotionEvent.ACTION_DOWN:
-                        try {
-                            if (mp.isPlaying()) {
-                                mp.stop();
-                                mp.release();
-                                mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
-                            } else {
-                                mp.start();
-                            }
-                        } catch(Exception e) { e.printStackTrace(); }
-                        //start timer
-                        timer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                mp.stop();
-                                mp.release();
-                                Intent hedhiIntent = new Intent(getApplicationContext(), Jinsia.class);
-                                startActivity(hedhiIntent);
-                            }
-                        }, 5000); //time out 5s
-                        return true;
-                    case MotionEvent.ACTION_UP:
-                        //stop timer
-                        timer.cancel();
-                        return true;
+        kablaYaUjauzito.setOnTouchListener(new View.OnTouchListener() {
+            private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
+                @Override
+                public boolean onDoubleTap(MotionEvent e) {
+                    Intent kablaYaUjauzitoActivity = new Intent(getApplicationContext(), KablaYaUjauzito.class);
+                    startActivity(kablaYaUjauzitoActivity);
+//                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
+//                    hedhi(nView);
+                    return super.onDoubleTap(e);
                 }
-                return false;
+                @Override
+                public boolean onSingleTapConfirmed(MotionEvent event) {
+                    mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
+                    mp.start();
+//                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
+                    Log.d("onSingleTapConfirmed", "Baada ya ujauzito");
+                    return false;
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                gestureDetector.onTouchEvent(event);
+                return true;
             }
+        });
 
+        wakatiWaUjauzito.setOnTouchListener(new View.OnTouchListener() {
+            private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
+//                @Override
+//                public boolean onDoubleTap(MotionEvent e) {
+//                    Intent hivActivity = new Intent(getApplicationContext(),wakatiWaUjauzito.class);
+//                    startActivity(hivActivity);
+////                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
+////                    hedhi(nView);
+//                    return super.onDoubleTap(e);
+//                }
+                @Override
+                public boolean onSingleTapConfirmed(MotionEvent event) {
+                    mp = MediaPlayer.create(context, R.raw.kipindi_cha_ujauzito);
+                    mp.start();
+//                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
+                    Log.d("onSingleTapConfirmed", "onSingleTap");
+                    return false;
+                }
+            });
 
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                gestureDetector.onTouchEvent(event);
+                return true;
+            }
+        });
+
+        baadaYaUjauzito.setOnTouchListener(new View.OnTouchListener() {
+            private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
+                //                @Override
+//                public boolean onDoubleTap(MotionEvent e) {
+//                    Intent hivActivity = new Intent(getApplicationContext(),wakatiWaUjauzito.class);
+//                    startActivity(hivActivity);
+////                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
+////                    hedhi(nView);
+//                    return super.onDoubleTap(e);
+//                }
+                @Override
+                public boolean onSingleTapConfirmed(MotionEvent event) {
+                    mp = MediaPlayer.create(context, R.raw.baada_ya_ujauzito);
+                    mp.start();
+//                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
+                    Log.d("onSingleTapConfirmed", "onSingleTap");
+                    return false;
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                gestureDetector.onTouchEvent(event);
+                return true;
+            }
         });
 
 
-//        hiv.setOnTouchListener(new View.OnTouchListener() {
-//             Timer timer = new Timer();
-//            @Override
-//            public boolean onTouch(View arg0, MotionEvent arg1) {
-//                switch ( arg1.getAction() ) {
-//                    case MotionEvent.ACTION_DOWN:
-//                        try {
-//                            if (mp.isPlaying()) {
-//                                mp.stop();
-//                                mp.release();
-//                                mp = MediaPlayer.create(context, R.raw.test2);
-//                            } else {
-//                                mp.start();
-//                            }
-//                        } catch(Exception e) { e.printStackTrace(); }
-//                        //start timer
-//                        timer.schedule(new TimerTask() {
-//                            @Override
-//                            public void run() {
-//                                mp.stop();
-//                                Intent hedhiIntent = new Intent(getApplicationContext(),Hiv.class);
-//                                startActivity(hedhiIntent);
-//                            }
-//                        }, 5000); //time out 5s
-//                        return true;
-//                    case MotionEvent.ACTION_UP:
-//                        //stop timer
-//                        timer.cancel();
-//                        return true;
-//                }
-//                return false;
-//            }
-//        });
 
-
-//        uzazi.setOnTouchListener(new View.OnTouchListener() {
-//            final Timer timer = new Timer();
-//            @Override
-//            public boolean onTouch(View arg0, MotionEvent arg1) {
-//                switch ( arg1.getAction() ) {
-//                    case MotionEvent.ACTION_DOWN:
-//
-//                        try {
-//                            if (mp.isPlaying()) {
-//                                mp.stop();
-//                                mp.release();
-//                                mp = MediaPlayer.create(context, R.raw.test);
-//                            } else {
-//                                mp.start();
-//                            }
-//                        } catch(Exception e) { e.printStackTrace(); }
-//
-//                        //start timer
-//                        timer.schedule(new TimerTask() {
-//                            @Override
-//                            public void run() {
-//                                mp.stop();
-//                                Intent hedhiIntent = new Intent(getApplicationContext(),Uzazi.class);
-//                                startActivity(hedhiIntent);
-//                            }
-//                        }, 5000); //time out 5s
-//                        return true;
-//                    case MotionEvent.ACTION_UP:
-//                        //stop timer
-//                        timer.cancel();
-//                        return true;
-//                }
-//                return false;
-//            }
-//        });
 
     }
 

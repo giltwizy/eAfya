@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">eAfya</string>
-    <string name="kipindi_cha_hedhi">Kipindi cha hedhi</string>
-    <string name="hiv">HIV</string>
-    <string name="hedhi">Hedhi</string>
     <string name="uzazi_wa_mpango">Uzazi wa mpango</string>
-    <string name="simu">Simu</string>
     <string name="ujumbe_wa_maneno">Ujumbe wa maneno</string>
-    <string name="picha">Picha</string>
+    <string name="splash_logo">Splash logo</string>
+    <string name="kabla_ya_ujauzito">Kabla ya Ujauzito</string>
+    <string name="wakati_wa_ujauzito">Wakati wa ujauzito</string>
+    <string name="baada_ya_ujauzito">Baada ya ujauzito</string>
+    <string name="taarifa_kabla_ya_ujauzito">Taarifa kabla ya ujauzito</string>
 </resources>

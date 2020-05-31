@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="10dp"
-        android:text="Taarifa kabla ya ujauzito"
+        android:text="@string/taarifa_kabla_ya_ujauzito"
         android:textAllCaps="true"
         android:textColor="@color/words_grey"
         android:textSize="24sp" />
@@ -26,7 +26,7 @@
 
 
         <TextView
-            android:id="@+id/umriSahihiKupataUjauzito"
+            android:id="@+id/mamboYaKuzingatiaKablaYaUjauzito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

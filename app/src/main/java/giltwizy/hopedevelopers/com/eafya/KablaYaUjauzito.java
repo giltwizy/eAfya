@@ -18,17 +18,52 @@ public class KablaYaUjauzito extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kabla_ya_ujauzito);
 
+        TextView mamboYaKuzingatiaKablaYaUjauzito = findViewById(R.id.mamboYaKuzingatiaKablaYaUjauzito);
+        TextView maandaliziKablaYaUjauzito = findViewById(R.id.maandaliziKablaYaUjauzito);
+        TextView uzaziWaMpango = findViewById(R.id.uzaziWaMpango);
+        TextView njiaZaUzaziWaMpango = findViewById(R.id.njiaZaUzaziWaMpango);
+        TextView njiaBoraYaUzaziWaMpango = findViewById(R.id.njiaBoraYaUzaziWaMpango);
         Button rudiNyuma = findViewById(R.id.rudiNyuma);
 
-        TextView umriSahihiKupataUjauzito = findViewById(R.id.umriSahihiKupataUjauzito);
+        mamboYaKuzingatiaKablaYaUjauzito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp = MediaPlayer.create(context, R.raw.mambo_ya_kuzingatia_kabla_ya_ujauzito);
+                mp.start();
+            }
+        });
 
-//        umriSahihiKupataUjauzito.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mp = MediaPlayer.create(context, R.raw.umri_wa_kupata_ujauzito);
-//                mp.start();
-//            }
-//        });
+        maandaliziKablaYaUjauzito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp = MediaPlayer.create(context, R.raw.maandalizi_ya_mwili_kabla_ya_ujauzito);
+                mp.start();
+            }
+        });
+
+        uzaziWaMpango.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp = MediaPlayer.create(context, R.raw.uzazi_wa_mpango);
+                mp.start();
+            }
+        });
+
+        njiaZaUzaziWaMpango.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp = MediaPlayer.create(context, R.raw.njia_za_uzazi_wa_mpango);
+                mp.start();
+            }
+        });
+
+        njiaBoraYaUzaziWaMpango.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp = MediaPlayer.create(context, R.raw.njia_ya_kupanga_uzazi_bora);
+                mp.start();
+            }
+        });
 
         rudiNyuma.setOnClickListener(new View.OnClickListener() {
             @Override

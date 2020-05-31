@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         CardView kablaYaUjauzito = findViewById(R.id.kablaYaUjauzitoCardView);
-        CardView hiv = findViewById(R.id.hivCardView);
+//        CardView hiv = findViewById(R.id.hivCardView);
 
         kablaYaUjauzito.setOnTouchListener(new View.OnTouchListener() {
             private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
@@ -52,33 +52,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        hiv.setOnTouchListener(new View.OnTouchListener() {
-            private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
-                @Override
-                public boolean onDoubleTap(MotionEvent e) {
-                    Intent hivActivity = new Intent(getApplicationContext(),Hiv.class);
-                    startActivity(hivActivity);
-//                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
-//                    hedhi(nView);
-                    return super.onDoubleTap(e);
-                }
-                @Override
-                public boolean onSingleTapConfirmed(MotionEvent event) {
-                    mp = MediaPlayer.create(context, R.raw.ukimwi);
-                    mp.start();
-//                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
-                    Log.d("onSingleTapConfirmed", "onSingleTap");
-                    return false;
-                }
-            });
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                gestureDetector.onTouchEvent(event);
-                return true;
-            }
-        });
+//        hiv.setOnTouchListener(new View.OnTouchListener() {
+//            private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
+//                @Override
+//                public boolean onDoubleTap(MotionEvent e) {
+//                    Intent hivActivity = new Intent(getApplicationContext(),Hiv.class);
+//                    startActivity(hivActivity);
+////                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
+////                    hedhi(nView);
+//                    return super.onDoubleTap(e);
+//                }
+//                @Override
+//                public boolean onSingleTapConfirmed(MotionEvent event) {
+//                    mp = MediaPlayer.create(context, R.raw.ukimwi);
+//                    mp.start();
+////                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
+//                    Log.d("onSingleTapConfirmed", "onSingleTap");
+//                    return false;
+//                }
+//            });
+//
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//
+//                gestureDetector.onTouchEvent(event);
+//                return true;
+//            }
+//        });
 
 
 

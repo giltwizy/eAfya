@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".MainActivity">
-
-
-
 
 
     <LinearLayout
@@ -23,10 +20,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/kablaYaUjauzitoCardView"
             android:layout_width="0dp"
-            app:cardCornerRadius="30dp"
-            android:layout_margin="5dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
                 android:id="@+id/kabla_ya_ujauzito"
@@ -38,9 +35,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:contentDescription="@string/kabla_ya_ujauzito"
                     android:padding="10dp"
-                    android:src="@mipmap/kabla_ya_ujauzito"
-                    android:contentDescription="@string/hedhi" />
+                    android:src="@mipmap/kabla_ya_ujauzito" />
 
                 <View
                     android:layout_width="match_parent"
@@ -53,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Kabla ya Ujauzito"
+                    android:text="@string/kabla_ya_ujauzito"
                     android:textAllCaps="true"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -61,11 +58,12 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/wakatiWaUjauzitoCardView"
             android:layout_width="0dp"
-            app:cardCornerRadius="30dp"
-            android:layout_margin="5dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -76,7 +74,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:contentDescription="@string/hiv"
+                    android:contentDescription="@string/kabla_ya_ujauzito"
                     android:padding="10dp"
                     android:src="@mipmap/kipindi_cha_ujauzito" />
 
@@ -91,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Wakati wa ujauzito"
+                    android:text="@string/wakati_wa_ujauzito"
                     android:textAllCaps="true"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -110,12 +108,12 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/uzaziWaMpangoCardView"
+            android:id="@+id/baadaYaUjauzitoCardView"
             android:layout_width="0dp"
-            app:cardCornerRadius="30dp"
-            android:layout_margin="5dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -126,9 +124,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:contentDescription="@string/uzazi_wa_mpango"
                     android:padding="10dp"
-                    android:src="@mipmap/baada_ya_ujauzito"
-                    android:contentDescription="@string/uzazi_wa_mpango" />
+                    android:src="@mipmap/baada_ya_ujauzito" />
 
                 <View
                     android:layout_width="match_parent"
@@ -141,20 +139,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:text="@string/baada_ya_ujauzito"
                     android:textAllCaps="true"
-                    android:text="baada ya ujauzito"
                     android:textStyle="bold" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/hivCardView"
+            android:id="@+id/ujumbeWaManenoCardView"
             android:layout_width="0dp"
-            app:cardCornerRadius="30dp"
-            android:layout_margin="5dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -165,9 +163,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:contentDescription="@string/ujumbe_wa_maneno"
                     android:padding="10dp"
-                    android:src="@mipmap/msg"
-                    android:contentDescription="@string/simu" />
+                    android:src="@mipmap/msg" />
 
                 <View
                     android:layout_width="match_parent"
@@ -189,8 +187,6 @@
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

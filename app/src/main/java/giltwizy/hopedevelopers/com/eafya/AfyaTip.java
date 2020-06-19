@@ -22,7 +22,7 @@ public class AfyaTip extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afya_tip);
 
-        ImageButton afyaTip = findViewById(R.id.ibAfyaTip);
+        ImageButton afyaTip = findViewById(R.id.ibElimuYaUzazi);
 
         afyaTip.setOnTouchListener(new View.OnTouchListener() {
             private GestureDetector gestureDetector = new GestureDetector(AfyaTip.this, new GestureDetector.SimpleOnGestureListener() {
@@ -67,7 +67,7 @@ public class AfyaTip extends AppCompatActivity {
                 y2 = touchEvent.getY();
                 if (x1 < x2) {
 //                    go to the left activity
-                    Intent i = new Intent(AfyaTip.this, MainActivity.class);
+                    Intent i = new Intent(AfyaTip.this, ElimuYaUzazi.class);
                     startActivity(i);
                 } else if (x1 > x2) {
 //                    go to the right activity

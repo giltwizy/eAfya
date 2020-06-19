@@ -1,4 +1,4 @@
-package giltwizy.hopedevelopers.com.eafya.afyaspot;
+package giltwizy.hopedevelopers.com.eafya;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,29 +12,27 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import giltwizy.hopedevelopers.com.eafya.R;
+import giltwizy.hopedevelopers.com.eafya.afyaspot.KablaYaUjauzitoTitle;
 
-public class WakatiWaUjauzitoTitle extends AppCompatActivity {
-
+public class ElimuYaUzazi extends AppCompatActivity {
     MediaPlayer mp;
     Context context = this;
-
     float x1, y1, x2, y2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wakati_wa_ujauzito_title);
+        setContentView(R.layout.activity_elimu_ya_uzazi);
 
-        ImageButton kablaYaUjauzitoTitle = findViewById(R.id.ibBaadaYaUjauzitoTitle);
+        ImageButton iCast = findViewById(R.id.ibElimuYaUzazi);
 
-        kablaYaUjauzitoTitle.setOnTouchListener(new View.OnTouchListener() {
-            private GestureDetector gestureDetector = new GestureDetector(WakatiWaUjauzitoTitle.this, new GestureDetector.SimpleOnGestureListener() {
+        iCast.setOnTouchListener(new View.OnTouchListener() {
+            private GestureDetector gestureDetector = new GestureDetector(ElimuYaUzazi.this, new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Intent wakatiWaUjauzitoActivity = new Intent(getApplicationContext(), WakatiWaUjauzito.class);
-                    startActivity(wakatiWaUjauzitoActivity);
+                    Intent iCastActivity = new Intent(getApplicationContext(), KablaYaUjauzitoTitle.class);
+                    startActivity(iCastActivity);
 //                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
 //                    hedhi(nView);
                     return super.onDoubleTap(e);
@@ -58,7 +56,6 @@ public class WakatiWaUjauzitoTitle extends AppCompatActivity {
                 return true;
             }
         });
-
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {
@@ -72,11 +69,11 @@ public class WakatiWaUjauzitoTitle extends AppCompatActivity {
                 y2 = touchEvent.getY();
                 if (x1 < x2) {
 //                    go to the left activity
-                    Intent i = new Intent(WakatiWaUjauzitoTitle.this, KablaYaUjauzitoTitle.class);
+                    Intent i = new Intent(ElimuYaUzazi.this, Icast.class);
                     startActivity(i);
                 } else if (x1 > x2) {
 //                    go to the right activity
-                    Intent i = new Intent(WakatiWaUjauzitoTitle.this, BaadaYaUjauzitoTitle.class);
+                    Intent i = new Intent(ElimuYaUzazi.this, AfyaTip.class);
                     startActivity(i);
                 }
                 break;

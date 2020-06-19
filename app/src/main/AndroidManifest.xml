@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".afyaspot.BaadaYaUjauzito"></activity>
+        <activity android:name=".ElimuYaUzazi"></activity>
+        <activity android:name=".afyaspot.BaadaYaUjauzito" />
         <activity android:name=".afyaspot.WakatiWaUjauzito" />
         <activity android:name=".AfyaTipsCommingSoon" />
         <activity android:name=".IcastCommingSoon" />

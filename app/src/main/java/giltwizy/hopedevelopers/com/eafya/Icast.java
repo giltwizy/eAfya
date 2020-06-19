@@ -22,7 +22,7 @@ public class Icast extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_icast);
 
-        ImageButton iCast = findViewById(R.id.ibAfyaTip);
+        ImageButton iCast = findViewById(R.id.ibElimuYaUzazi);
 
         iCast.setOnTouchListener(new View.OnTouchListener() {
             private GestureDetector gestureDetector = new GestureDetector(Icast.this, new GestureDetector.SimpleOnGestureListener() {
@@ -71,7 +71,7 @@ public class Icast extends AppCompatActivity {
                     startActivity(i);
                 } else if (x1 > x2) {
 //                    go to the right activity
-                    Intent i = new Intent(Icast.this, MainActivity.class);
+                    Intent i = new Intent(Icast.this, ElimuYaUzazi.class);
                     startActivity(i);
                 }
                 break;

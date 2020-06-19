@@ -12,8 +12,6 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import giltwizy.hopedevelopers.com.eafya.AfyaTip;
-import giltwizy.hopedevelopers.com.eafya.Icast;
 import giltwizy.hopedevelopers.com.eafya.R;
 
 public class BaadaYaUjauzitoTitle extends AppCompatActivity {
@@ -74,11 +72,11 @@ public class BaadaYaUjauzitoTitle extends AppCompatActivity {
                 y2 = touchEvent.getY();
                 if (x1 < x2) {
 //                    go to the left activity
-                    Intent i = new Intent(BaadaYaUjauzitoTitle.this, Icast.class);
+                    Intent i = new Intent(BaadaYaUjauzitoTitle.this, WakatiWaUjauzitoTitle.class);
                     startActivity(i);
                 } else if (x1 > x2) {
 //                    go to the right activity
-                    Intent i = new Intent(BaadaYaUjauzitoTitle.this, AfyaTip.class);
+                    Intent i = new Intent(BaadaYaUjauzitoTitle.this, KablaYaUjauzitoTitle.class);
                     startActivity(i);
                 }
                 break;

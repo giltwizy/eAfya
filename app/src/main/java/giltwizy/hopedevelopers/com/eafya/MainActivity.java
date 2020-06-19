@@ -1,12 +1,21 @@
 package giltwizy.hopedevelopers.com.eafya;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    MediaPlayer mp;
+    Context context = this;
 
     float x1, y1, x2, y2;
 
@@ -14,6 +23,40 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageButton afyaSpot = findViewById(R.id.ibAfyaSpot);
+
+        afyaSpot.setOnTouchListener(new View.OnTouchListener() {
+            private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public boolean onDoubleTap(MotionEvent e) {
+                    Intent kablaYaUjauzitoActivity = new Intent(getApplicationContext(), KablaYaUjauzito.class);
+                    startActivity(kablaYaUjauzitoActivity);
+//                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
+//                    hedhi(nView);
+                    return super.onDoubleTap(e);
+                }
+
+                @Override
+                public boolean onSingleTapConfirmed(MotionEvent event) {
+                    mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
+                    mp.start();
+//                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
+                    Log.d("onSingleTapConfirmed", "Baada ya ujauzito");
+
+                    return false;
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                gestureDetector.onTouchEvent(event);
+                return true;
+            }
+        });
+
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {

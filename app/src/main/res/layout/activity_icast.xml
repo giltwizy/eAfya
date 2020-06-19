@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Icast">
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/appCompatImageButton"
@@ -18,10 +18,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvAfyaSpot"
+        android:id="@+id/tvIcast"
         android:layout_width="100sp"
         android:layout_height="40sp"
-        android:text="@string/afyaspot"
+        android:text="@string/icast"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

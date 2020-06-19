@@ -10,4 +10,6 @@
     <string name="icast">Icast</string>
     <string name="afyaspot">AfyaSpot</string>
     <string name="afyatip">AfyaTip</string>
+    <string name="afya_tips_comming_soon">Afya Tips Comming Soon</string>
+    <string name="icast_comming_soon">Icast comming soon</string>
 </resources>

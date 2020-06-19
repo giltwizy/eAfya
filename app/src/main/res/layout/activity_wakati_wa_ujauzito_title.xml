@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Icast">
+    tools:context=".afyaspot.WakatiWaUjauzitoTitle">
 
     <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/ibAfyaTip"
+        android:id="@+id/ibBaadaYaUjauzitoTitle"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/circle_shape"
@@ -18,15 +18,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvIcast"
+        android:id="@+id/tvBaadaYaUjauzitoTitle"
         android:layout_width="100sp"
         android:layout_height="40sp"
-        android:text="@string/icast"
+        android:layout_marginBottom="224dp"
+        android:text="@string/wakati_wa_ujauzito"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ibAfyaTip"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toBottomOf="@+id/ibBaadaYaUjauzitoTitle"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package giltwizy.hopedevelopers.com.eafya;
+package giltwizy.hopedevelopers.com.eafya.afyaspot;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,11 +12,11 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import giltwizy.hopedevelopers.com.eafya.afyaspot.BaadaYaUjauzitoTitle;
-import giltwizy.hopedevelopers.com.eafya.afyaspot.KablaYaUjauzitoTitle;
-import giltwizy.hopedevelopers.com.eafya.afyaspot.WakatiWaUjauzitoTitle;
+import giltwizy.hopedevelopers.com.eafya.AfyaTip;
+import giltwizy.hopedevelopers.com.eafya.Icast;
+import giltwizy.hopedevelopers.com.eafya.R;
 
-public class MainActivity extends AppCompatActivity {
+public class WakatiWaUjauzitoTitle extends AppCompatActivity {
 
     MediaPlayer mp;
     Context context = this;
@@ -26,17 +26,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_kabla_ya_ujauzito_title);
 
-        ImageButton afyaSpot = findViewById(R.id.ibAfyaSpot);
+        ImageButton kablaYaUjauzitoTitle = findViewById(R.id.ibBaadaYaUjauzitoTitle);
 
-        afyaSpot.setOnTouchListener(new View.OnTouchListener() {
-            private GestureDetector gestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
+        kablaYaUjauzitoTitle.setOnTouchListener(new View.OnTouchListener() {
+            private GestureDetector gestureDetector = new GestureDetector(WakatiWaUjauzitoTitle.this, new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Intent kablaYaUjauzitoTitleActivity = new Intent(getApplicationContext(), KablaYaUjauzitoTitle.class);
-                    startActivity(kablaYaUjauzitoTitleActivity);
+                    Intent wakatiWaUjauzitoActivity = new Intent(getApplicationContext(), WakatiWaUjauzito.class);
+                    startActivity(wakatiWaUjauzitoActivity);
 //                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
 //                    hedhi(nView);
                     return super.onDoubleTap(e);
@@ -74,11 +74,11 @@ public class MainActivity extends AppCompatActivity {
                 y2 = touchEvent.getY();
                 if (x1 < x2) {
 //                    go to the left activity
-                    Intent i = new Intent(MainActivity.this, BaadaYaUjauzitoTitle.class);
+                    Intent i = new Intent(WakatiWaUjauzitoTitle.this, Icast.class);
                     startActivity(i);
                 } else if (x1 > x2) {
 //                    go to the right activity
-                    Intent i = new Intent(MainActivity.this, WakatiWaUjauzitoTitle.class);
+                    Intent i = new Intent(WakatiWaUjauzitoTitle.this, AfyaTip.class);
                     startActivity(i);
                 }
                 break;

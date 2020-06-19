@@ -11,6 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".afyaspot.BaadaYaUjauzito"></activity>
+        <activity android:name=".afyaspot.WakatiWaUjauzito" />
+        <activity android:name=".AfyaTipsCommingSoon" />
+        <activity android:name=".IcastCommingSoon" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +25,10 @@
         <activity android:name=".Icast" />
         <activity android:name=".AfyaTip" />
         <activity android:name=".MainActivity" />
-
+        <activity android:name=".afyaspot.KablaYaUjauzito" />
+        <activity android:name=".afyaspot.KablaYaUjauzitoTitle" />
+        <activity android:name=".afyaspot.WakatiWaUjauzitoTitle" />
+        <activity android:name=".afyaspot.BaadaYaUjauzitoTitle" />
     </application>
 
 </manifest>

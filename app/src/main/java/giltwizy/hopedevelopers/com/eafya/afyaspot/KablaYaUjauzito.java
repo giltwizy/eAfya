@@ -82,5 +82,7 @@ public class KablaYaUjauzito extends AppCompatActivity {
     public void onBackPressed() {
         Intent kablaYaUjauzitoTitleActivity = new Intent(KablaYaUjauzito.this, KablaYaUjauzitoTitle.class);
         startActivity(kablaYaUjauzitoTitleActivity);
+        finish();
+        System.exit(1);
     }
 }

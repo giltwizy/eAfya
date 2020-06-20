@@ -83,7 +83,7 @@ public class ElimuYaUzazi extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        finish();
+        finish();
         System.exit(0);
     }
 }

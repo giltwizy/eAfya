@@ -5,4 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".afyaspot.BaadaYaUjauzito">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baada ya ujauzito comming soon"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="389dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import giltwizy.hopedevelopers.com.eafya.ElimuYaUzazi;
 import giltwizy.hopedevelopers.com.eafya.R;
 
 public class KablaYaUjauzitoTitle extends AppCompatActivity {
@@ -82,5 +83,11 @@ public class KablaYaUjauzitoTitle extends AppCompatActivity {
                 break;
         }
         return false;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent elimuYaUzaziActivity = new Intent(KablaYaUjauzitoTitle.this, ElimuYaUzazi.class);
+        startActivity(elimuYaUzaziActivity);
     }
 }

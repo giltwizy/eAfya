@@ -5,4 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".afyaspot.WakatiWaUjauzito">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wakati wa Ujauzito comming soon"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="360dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

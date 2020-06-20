@@ -80,4 +80,10 @@ public class ElimuYaUzazi extends AppCompatActivity {
         }
         return false;
     }
+
+    @Override
+    public void onBackPressed() {
+//        finish();
+        System.exit(0);
+    }
 }

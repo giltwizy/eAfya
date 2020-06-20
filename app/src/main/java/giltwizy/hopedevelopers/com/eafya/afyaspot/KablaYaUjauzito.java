@@ -1,6 +1,7 @@
 package giltwizy.hopedevelopers.com.eafya.afyaspot;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -75,5 +76,11 @@ public class KablaYaUjauzito extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent kablaYaUjauzitoTitleActivity = new Intent(KablaYaUjauzito.this, KablaYaUjauzitoTitle.class);
+        startActivity(kablaYaUjauzitoTitleActivity);
     }
 }

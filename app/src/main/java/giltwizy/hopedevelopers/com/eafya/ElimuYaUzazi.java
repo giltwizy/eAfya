@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -18,11 +19,14 @@ public class ElimuYaUzazi extends AppCompatActivity {
     MediaPlayer mp;
     Context context = this;
     float x1, y1, x2, y2;
+    private Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elimu_ya_uzazi);
+
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         ImageButton iCast = findViewById(R.id.ibElimuYaUzazi);
 
@@ -31,8 +35,9 @@ public class ElimuYaUzazi extends AppCompatActivity {
 
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Intent iCastActivity = new Intent(getApplicationContext(), KablaYaUjauzitoTitle.class);
-                    startActivity(iCastActivity);
+                    Intent kablaYaUjauzitoTitleActivity = new Intent(getApplicationContext(), KablaYaUjauzitoTitle.class);
+                    startActivity(kablaYaUjauzitoTitleActivity);
+                    vibration();
 //                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
 //                    hedhi(nView);
                     return super.onDoubleTap(e);
@@ -56,6 +61,12 @@ public class ElimuYaUzazi extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    public void vibration() {
+        if (vibrator.hasVibrator()) {
+            vibrator.vibrate(100);
+        }
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {

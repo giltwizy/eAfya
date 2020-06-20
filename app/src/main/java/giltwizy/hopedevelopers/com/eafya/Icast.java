@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -16,11 +17,14 @@ public class Icast extends AppCompatActivity {
     MediaPlayer mp;
     Context context = this;
     float x1, y1, x2, y2;
+    private Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_icast);
+
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         ImageButton iCast = findViewById(R.id.ibElimuYaUzazi);
 
@@ -31,6 +35,7 @@ public class Icast extends AppCompatActivity {
                 public boolean onDoubleTap(MotionEvent e) {
                     Intent iCastActivity = new Intent(getApplicationContext(), IcastCommingSoon.class);
                     startActivity(iCastActivity);
+                    vibrate();
 //                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
 //                    hedhi(nView);
                     return super.onDoubleTap(e);
@@ -54,6 +59,12 @@ public class Icast extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    private void vibrate() {
+        if (vibrator.hasVibrator()) {
+            vibrator.vibrate(100);
+        }
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {

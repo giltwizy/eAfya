@@ -7,9 +7,9 @@
     tools:context=".afyaspot.BaadaYaUjauzitoTitle">
 
     <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/ibBaadaYaUjauzitoTitle"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/ibBaadaYaUjauzito"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:background="@drawable/circle_shape"
         android:src="@drawable/ic_lightbulb_outline_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,17 +18,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvBaadaYaUjauzitoTitle"
+        android:id="@+id/tvBaadaYaUjauzito"
         android:layout_width="wrap_content"
-        android:layout_height="40sp"
-        android:layout_marginBottom="224dp"
+        android:layout_height="40dp"
         android:text="@string/baada_ya_ujauzito"
+        android:textSize="30sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ibBaadaYaUjauzitoTitle"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/ibBaadaYaUjauzito"
+        app:layout_constraintVertical_bias="0.25" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

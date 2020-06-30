@@ -5,12 +5,10 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Icast extends AppCompatActivity {
@@ -26,45 +24,45 @@ public class Icast extends AppCompatActivity {
 
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
-        ImageButton iCast = findViewById(R.id.ibElimuYaUzazi);
+        ImageButton iCast = findViewById(R.id.ibAfyaTip);
 
         iCast.setOnTouchListener(new View.OnTouchListener() {
             private GestureDetector gestureDetector = new GestureDetector(Icast.this, new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Intent iCastActivity = new Intent(getApplicationContext(), IcastCommingSoon.class);
-                    startActivity(iCastActivity);
+                    openIcastActivity();
                     vibrate();
-//                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
-//                    hedhi(nView);
                     return super.onDoubleTap(e);
                 }
 
                 @Override
                 public boolean onSingleTapConfirmed(MotionEvent event) {
-                    mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
-                    mp.start();
-//                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
-                    Log.d("onSingleTapConfirmed", "Baada ya ujauzito");
-
+                    playIcastAudio();
                     return false;
                 }
             });
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-
                 gestureDetector.onTouchEvent(event);
                 return true;
             }
         });
     }
 
+    private void playIcastAudio() {
+        mp = MediaPlayer.create(context, R.raw.i_cast);
+        mp.start();
+    }
+
+    private void openIcastActivity() {
+        Intent iCastActivity = new Intent(getApplicationContext(), IcastCommingSoon.class);
+        startActivity(iCastActivity);
+    }
+
     private void vibrate() {
-        if (vibrator.hasVibrator()) {
             vibrator.vibrate(100);
-        }
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {
@@ -92,10 +90,6 @@ public class Icast extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
         finish();
         System.exit(0);
     }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -12,13 +13,13 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import giltwizy.hopedevelopers.com.eafya.ElimuYaUzazi;
 import giltwizy.hopedevelopers.com.eafya.R;
 
 public class WakatiWaUjauzitoTitle extends AppCompatActivity {
 
     MediaPlayer mp;
     Context context = this;
+    private Vibrator vibrator;
 
     float x1, y1, x2, y2;
 
@@ -27,39 +28,50 @@ public class WakatiWaUjauzitoTitle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wakati_wa_ujauzito_title);
 
-        ImageButton kablaYaUjauzitoTitle = findViewById(R.id.ibBaadaYaUjauzitoTitle);
+        ImageButton wakatiWaUjauzitoTitle = findViewById(R.id.ibWakatiWaUjauzito);
 
-        kablaYaUjauzitoTitle.setOnTouchListener(new View.OnTouchListener() {
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+
+        wakatiWaUjauzitoTitle.setOnTouchListener(new View.OnTouchListener() {
             private GestureDetector gestureDetector = new GestureDetector(WakatiWaUjauzitoTitle.this, new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Intent wakatiWaUjauzitoActivity = new Intent(getApplicationContext(), WakatiWaUjauzito.class);
-                    startActivity(wakatiWaUjauzitoActivity);
-//                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
-//                    hedhi(nView);
+                    openWakatiWaUjauzitoActivity();
+                    vibrate();
+                    Log.d("DoubleTap","WakatiWaUjauzito ImageButton");
                     return super.onDoubleTap(e);
                 }
 
                 @Override
                 public boolean onSingleTapConfirmed(MotionEvent event) {
-                    mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
-                    mp.start();
-//                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
-                    Log.d("onSingleTapConfirmed", "Baada ya ujauzito");
-
+                    playWakatiWaUjauzitoAudio();
+                    Log.d("SingleTap", "WakatiWaUjauzito ImageButton");
                     return false;
                 }
             });
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-
                 gestureDetector.onTouchEvent(event);
                 return true;
             }
         });
 
+    }
+
+    private void playWakatiWaUjauzitoAudio() {
+        mp = MediaPlayer.create(context, R.raw.kipindi_cha_ujauzito);
+        mp.start();
+    }
+
+    private void openWakatiWaUjauzitoActivity() {
+        Intent wakatiWaUjauzitoActivity = new Intent(getApplicationContext(), WakatiWaUjauzito.class);
+        startActivity(wakatiWaUjauzitoActivity);
+    }
+
+    private void vibrate() {
+        vibrator.vibrate(100);
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {
@@ -85,8 +97,9 @@ public class WakatiWaUjauzitoTitle extends AppCompatActivity {
         return false;
     }
 
+    @Override
     public void onBackPressed() {
-        Intent elimuYaUzaziActivity = new Intent(WakatiWaUjauzitoTitle.this, ElimuYaUzazi.class);
-        startActivity(elimuYaUzaziActivity);
+        finish();
+        System.exit(0);
     }
 }

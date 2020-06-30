@@ -15,9 +15,5 @@ public class WakatiWaUjauzito extends AppCompatActivity {
         setContentView(R.layout.activity_wakati_wa_ujauzito);
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent wakatiWaUjauzitoTitleActivity = new Intent(WakatiWaUjauzito.this, WakatiWaUjauzitoTitle.class);
-        startActivity(wakatiWaUjauzitoTitleActivity);
-    }
+
 }

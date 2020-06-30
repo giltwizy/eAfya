@@ -28,9 +28,9 @@ public class ElimuYaUzazi extends AppCompatActivity {
 
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
-        ImageButton iCast = findViewById(R.id.ibElimuYaUzazi);
+        ImageButton elimuYaUzazi = findViewById(R.id.ibAfyaTip);
 
-        iCast.setOnTouchListener(new View.OnTouchListener() {
+        elimuYaUzazi.setOnTouchListener(new View.OnTouchListener() {
             private GestureDetector gestureDetector = new GestureDetector(ElimuYaUzazi.this, new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
@@ -45,7 +45,7 @@ public class ElimuYaUzazi extends AppCompatActivity {
 
                 @Override
                 public boolean onSingleTapConfirmed(MotionEvent event) {
-                    mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
+                    mp = MediaPlayer.create(context, R.raw.taarifa_afya_ya_uzazi);
                     mp.start();
 //                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
                     Log.d("onSingleTapConfirmed", "Baada ya ujauzito");
@@ -64,9 +64,7 @@ public class ElimuYaUzazi extends AppCompatActivity {
     }
 
     public void vibration() {
-        if (vibrator.hasVibrator()) {
             vibrator.vibrate(100);
-        }
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {

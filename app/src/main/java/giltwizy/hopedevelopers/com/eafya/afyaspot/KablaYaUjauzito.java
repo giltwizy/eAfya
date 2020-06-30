@@ -26,7 +26,7 @@ public class KablaYaUjauzito extends AppCompatActivity {
         TextView uzaziWaMpango = findViewById(R.id.uzaziWaMpango);
         TextView njiaZaUzaziWaMpango = findViewById(R.id.njiaZaUzaziWaMpango);
         TextView njiaBoraYaUzaziWaMpango = findViewById(R.id.njiaBoraYaUzaziWaMpango);
-        Button rudiNyuma = findViewById(R.id.rudiNyuma);
+
 
         mamboYaKuzingatiaKablaYaUjauzito.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,20 +68,11 @@ public class KablaYaUjauzito extends AppCompatActivity {
             }
         });
 
-        rudiNyuma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mp = MediaPlayer.create(context, R.raw.sitisha);
-                mp.start();
-                onBackPressed();
-            }
-        });
+
     }
 
     @Override
     public void onBackPressed() {
-        Intent kablaYaUjauzitoTitleActivity = new Intent(KablaYaUjauzito.this, KablaYaUjauzitoTitle.class);
-        startActivity(kablaYaUjauzitoTitleActivity);
         finish();
         System.exit(1);
     }

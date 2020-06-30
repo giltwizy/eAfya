@@ -15,9 +15,5 @@ public class BaadaYaUjauzito extends AppCompatActivity {
         setContentView(R.layout.activity_baada_ya_ujauzito);
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent baadaYaUjauzitoTitleActivity = new Intent(BaadaYaUjauzito.this, BaadaYaUjauzitoTitle.class);
-        startActivity(baadaYaUjauzitoTitleActivity);
-    }
+
 }

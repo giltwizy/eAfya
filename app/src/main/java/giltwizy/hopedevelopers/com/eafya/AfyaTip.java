@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -16,33 +17,32 @@ public class AfyaTip extends AppCompatActivity {
     MediaPlayer mp;
     Context context = this;
     float x1, x2, y1, y2;
+    private Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afya_tip);
 
-        ImageButton afyaTip = findViewById(R.id.ibElimuYaUzazi);
+        ImageButton afyaTip = findViewById(R.id.ibAfyaTip);
+
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         afyaTip.setOnTouchListener(new View.OnTouchListener() {
             private GestureDetector gestureDetector = new GestureDetector(AfyaTip.this, new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Intent afyaTipCommingSoonActivity = new Intent(getApplicationContext(), AfyaTipsCommingSoon.class);
-                    startActivity(afyaTipCommingSoonActivity);
-//                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
-//                    hedhi(nView);
+                    openAfyaTipCommingSoonActivity();
+                    vibrate();
+                    Log.d("DoubleTap", "AfyaTip imageButton");
                     return super.onDoubleTap(e);
                 }
 
                 @Override
                 public boolean onSingleTapConfirmed(MotionEvent event) {
-                    mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
-                    mp.start();
-//                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
-                    Log.d("onSingleTapConfirmed", "Baada ya ujauzito");
-
+                    playAfyaTipsAudio();
+                    Log.d("SingleTap", "AfyaTip imageButton");
                     return false;
                 }
             });
@@ -54,6 +54,20 @@ public class AfyaTip extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    private void vibrate() {
+        vibrator.vibrate(100);
+    }
+
+    private void playAfyaTipsAudio() {
+        mp = MediaPlayer.create(context, R.raw.afya_tips);
+        mp.start();
+    }
+
+    private void openAfyaTipCommingSoonActivity() {
+        Intent afyaTipCommingSoonActivity = new Intent(getApplicationContext(), AfyaTipsCommingSoon.class);
+        startActivity(afyaTipCommingSoonActivity);
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {
@@ -81,10 +95,6 @@ public class AfyaTip extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
         finish();
         System.exit(0);
     }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -19,6 +20,7 @@ public class BaadaYaUjauzitoTitle extends AppCompatActivity {
 
     MediaPlayer mp;
     Context context = this;
+    Vibrator vibrator;
 
     float x1, y1, x2, y2;
 
@@ -27,27 +29,24 @@ public class BaadaYaUjauzitoTitle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_baada_ya_ujauzito_title);
 
-        ImageButton kablaYaUjauzitoTitle = findViewById(R.id.ibBaadaYaUjauzitoTitle);
+        ImageButton baadaYaUjauzitoTitle = findViewById(R.id.ibBaadaYaUjauzito);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
-        kablaYaUjauzitoTitle.setOnTouchListener(new View.OnTouchListener() {
+        baadaYaUjauzitoTitle.setOnTouchListener(new View.OnTouchListener() {
             private GestureDetector gestureDetector = new GestureDetector(BaadaYaUjauzitoTitle.this, new GestureDetector.SimpleOnGestureListener() {
 
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
-                    Intent baadaYaUjauzitoActivity = new Intent(getApplicationContext(), BaadaYaUjauzito.class);
-                    startActivity(baadaYaUjauzitoActivity);
-//                    Toast.makeText(getApplicationContext(), "onDoubleTap", Toast.LENGTH_SHORT).show();
-//                    hedhi(nView);
+                    openBaadaYaUjauzitoActivity();
+                    vibrate();
+                    Log.d("DoubleTap","BaadaYaUjauzito imageButton");
                     return super.onDoubleTap(e);
                 }
 
                 @Override
                 public boolean onSingleTapConfirmed(MotionEvent event) {
-                    mp = MediaPlayer.create(context, R.raw.kabla_ya_ujauzito);
-                    mp.start();
-//                    Toast.makeText(getApplicationContext(), "onSingleTap", Toast.LENGTH_SHORT).show();
-                    Log.d("onSingleTapConfirmed", "Baada ya ujauzito");
-
+                    playBaadaYaUjauzitoAudio();
+                    Log.d("SingleTap", "BaadaYaUjauzito imageButton");
                     return false;
                 }
             });
@@ -60,6 +59,20 @@ public class BaadaYaUjauzitoTitle extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void playBaadaYaUjauzitoAudio() {
+        mp = MediaPlayer.create(context, R.raw.baada_ya_ujauzito);
+        mp.start();
+    }
+
+    private void openBaadaYaUjauzitoActivity() {
+        Intent baadaYaUjauzitoActivity = new Intent(getApplicationContext(), BaadaYaUjauzito.class);
+        startActivity(baadaYaUjauzitoActivity);
+    }
+
+    private void vibrate() {
+        vibrator.vibrate(100);
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {

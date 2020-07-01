@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/blue"
     android:orientation="vertical"
-    tools:context=".KablaYaUjauzito">
+    tools:context=".afyaspot.KablaYaUjauzito">
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,7 +14,6 @@
         android:padding="10dp"
         android:text="@string/taarifa_kabla_ya_ujauzito"
         android:textAllCaps="true"
-        android:textColor="@color/words_grey"
         android:textSize="24sp" />
 
 
@@ -32,7 +31,6 @@
             android:layout_gravity="center"
             android:padding="10dp"
             android:text="Je,ni yapi mambo ya kuzingatia kabla ya ujauzito?"
-            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <View
@@ -49,7 +47,6 @@
             android:layout_gravity="center"
             android:padding="10dp"
             android:text="Maandalizi sahihi ya mwili kwa ajili ya ujauzito?"
-            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <View
@@ -66,7 +63,6 @@
             android:layout_gravity="center"
             android:padding="10dp"
             android:text="Fahamu kuhusu uzazi wa mpango"
-            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <View
@@ -83,7 +79,6 @@
             android:layout_gravity="center"
             android:padding="10dp"
             android:text="Je, ni zipi njia za uzazi wa mpango?"
-            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <View
@@ -100,7 +95,6 @@
             android:layout_gravity="center"
             android:padding="10dp"
             android:text="Je, ni njia ipi ya kupanga uzazi bora kuliko zote?"
-            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <View
@@ -109,18 +103,6 @@
             android:layout_margin="5dp"
             android:background="@color/colorAccent"
             android:padding="10dp" />
-
-
-        <Button
-            android:id="@+id/rudiNyuma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:background="@color/blue"
-            android:text="Rudi nyuma"
-            android:textColor="@color/white" />
 
 
     </LinearLayout>

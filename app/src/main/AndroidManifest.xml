@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="giltwizy.hopedevelopers.com.eafya">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
@@ -11,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".KablaYaUjauzito" />
-        <activity android:name=".ChaguaUmri" />
-        <activity android:name=".Hiv" />
-        <activity android:name=".MainActivity" />
+
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Icast" />
+        <activity android:name=".AfyaTip" />
+        <activity android:name=".afyaspot.KablaYaUjauzito" />
+        <activity android:name=".afyaspot.KablaYaUjauzitoTitle" />
+        <activity android:name=".afyaspot.WakatiWaUjauzitoTitle" />
+        <activity android:name=".afyaspot.BaadaYaUjauzitoTitle" />
+        <activity android:name=".ElimuYaUzazi" />
+        <activity android:name=".afyaspot.BaadaYaUjauzito" />
+        <activity android:name=".afyaspot.WakatiWaUjauzito" />
+        <activity android:name=".AfyaTipsCommingSoon" />
+        <activity android:name=".IcastCommingSoon" />
+
     </application>
 
 </manifest>

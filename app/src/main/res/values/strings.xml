@@ -7,4 +7,10 @@
     <string name="wakati_wa_ujauzito">Wakati wa ujauzito</string>
     <string name="baada_ya_ujauzito">Baada ya ujauzito</string>
     <string name="taarifa_kabla_ya_ujauzito">Taarifa kabla ya ujauzito</string>
+    <string name="icast">Icast</string>
+    <string name="afyaspot">AfyaSpot</string>
+    <string name="afyatip">AfyaTip</string>
+    <string name="afya_tips_comming_soon">Afya Tips Comming Soon</string>
+    <string name="icast_comming_soon">Icast comming soon</string>
+    <string name="elimu_ya_uzazi">Elimu ya uzazi</string>
 </resources>

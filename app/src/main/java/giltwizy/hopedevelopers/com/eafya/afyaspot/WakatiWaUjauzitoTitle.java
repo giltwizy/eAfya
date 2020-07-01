@@ -87,19 +87,17 @@ public class WakatiWaUjauzitoTitle extends AppCompatActivity {
 //                    go to the left activity
                     Intent i = new Intent(WakatiWaUjauzitoTitle.this, KablaYaUjauzitoTitle.class);
                     startActivity(i);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 } else if (x1 > x2) {
 //                    go to the right activity
                     Intent i = new Intent(WakatiWaUjauzitoTitle.this, BaadaYaUjauzitoTitle.class);
                     startActivity(i);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 break;
         }
         return false;
     }
 
-    @Override
-    public void onBackPressed() {
-        finish();
-        System.exit(0);
-    }
+
 }

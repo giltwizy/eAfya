@@ -64,7 +64,7 @@ public class ElimuYaUzazi extends AppCompatActivity {
     }
 
     public void vibration() {
-            vibrator.vibrate(100);
+        vibrator.vibrate(100);
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent) {
@@ -80,10 +80,12 @@ public class ElimuYaUzazi extends AppCompatActivity {
 //                    go to the left activity
                     Intent i = new Intent(ElimuYaUzazi.this, Icast.class);
                     startActivity(i);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 } else if (x1 > x2) {
 //                    go to the right activity
                     Intent i = new Intent(ElimuYaUzazi.this, AfyaTip.class);
                     startActivity(i);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
                 break;
         }

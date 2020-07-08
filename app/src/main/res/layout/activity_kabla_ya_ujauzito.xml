@@ -1,111 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
-    android:orientation="vertical"
-    tools:context=".afyaspot.KablaYaUjauzito">
+    android:background="@color/MaterialGray200">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="10dp"
-        android:text="@string/taarifa_kabla_ya_ujauzito"
-        android:textAllCaps="true"
-        android:textSize="24sp" />
-
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-
-        <TextView
-            android:id="@+id/mamboYaKuzingatiaKablaYaUjauzito"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:text="Je,ni yapi mambo ya kuzingatia kabla ya ujauzito?"
-            android:textSize="18sp" />
-
-        <View
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="5dp"
-            android:background="@color/colorAccent"
-            android:padding="10dp" />
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/margin_4"
+            android:paddingEnd="@dimen/margin_4"
+            android:paddingLeft="@dimen/margin_4"
+            android:paddingStart="@dimen/margin_4"
+            android:clipToPadding="false"/>
 
-        <TextView
-            android:id="@+id/maandaliziKablaYaUjauzito"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:text="Maandalizi sahihi ya mwili kwa ajili ya ujauzito?"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="5dp"
-            android:background="@color/colorAccent"
-            android:padding="10dp" />
-
-        <TextView
-            android:id="@+id/uzaziWaMpango"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:text="Fahamu kuhusu uzazi wa mpango"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="5dp"
-            android:background="@color/colorAccent"
-            android:padding="10dp" />
-
-        <TextView
-            android:id="@+id/njiaZaUzaziWaMpango"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:text="Je, ni zipi njia za uzazi wa mpango?"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="5dp"
-            android:background="@color/colorAccent"
-            android:padding="10dp" />
-
-        <TextView
-            android:id="@+id/njiaBoraYaUzaziWaMpango"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:text="Je, ni njia ipi ya kupanga uzazi bora kuliko zote?"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="5dp"
-            android:background="@color/colorAccent"
-            android:padding="10dp" />
-
-
-    </LinearLayout>
-
-
-</LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
